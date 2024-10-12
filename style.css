@@ -10,6 +10,59 @@ body {
     line-height: 1.6; /* A basic line-height for readability */
     color: #333; /* A basic text color that's not too harsh */
     background-color: #fff; /* A basic background color */
+    margin: 50;
 }
 
 /* Add your custom CSS below this line */
+h1,
+h2 {
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+#card-number{
+    width: 150px;
+}
+
+#exp-date{
+    width: 60px;
+}
+
+#cvc{
+    width: 60px;
+}
+
+#street{
+    width: 60%;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+#city{
+    width: 20%;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+#state,
+#zipcode{
+    width: 60px;
+}
+
+#place-order{
+    width: 150px;
+    height: 40px;
+}
+
+.place-order input{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+[role=order_form]{
+    background-color: lightblue;
+    width: 600px;
+}

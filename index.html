@@ -1,29 +1,30 @@
 <html>
 <head>
-<title>Document title</title>
-<meta charset='utf-8'>
-<meta name='description' content='Description of document content'>
+  <title>Sushi Corner</title>
+  <meta charset='utf-8'>
+  <meta name='description' content='Description of document content'>
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
 <header role='banner'>
-  <h1>Document title, main headline</h1>
+  <h1>Sushi Corner</h1>
   <nav>
-    <ol role='navigation'>
+    <ul role='navigation'>
       <li>
-        <a href='#'>alpha</a>
+        <a href='#about'>About Us</a>
       </li>
       <li>
-        <a href='#'>bravo</a>
+        <a href='#menu'>Our Menu</a>
       </li>
       <li>
-        <a href='#'>charlie</a>
+        <a href='#order-form'>Order Form</a>
       </li>
       <li>
-        <a href='#'>delta</a>
+        <a href='#contact'>Contact Us</a>
       </li>
-    </ol>
+    </ul>
     <form role='search'>
       <input type='search' placeholder='Enter search term here...'>
       <input type='submit' value='search'>
@@ -32,30 +33,96 @@
 </header>
 
 <main role='main'>
-  <h2>Main Content</h2>
-  <p>
-    Text for this article. 
-    Keep in mind that the hierarchy of headlines 
-    (h1 descending to h6) matters a lot to screen readers.
-  </p>
-  
+  <h2 id="about">About Us</h2>
+  <p>Welcome to our Sushi Corner! We hope you'll enjoy your time with us.</p>
+
+  <h2 id="menu">Our Menu</h2>
+  <div>
+    <h4>Sashimi Platter - $20.00</h4>
+    <p>Tuna, Salmon, Scallop, Daikon, Avocado</p>
+    <img src="https://img.freepik.com/premium-photo/sashimi-platter-with-salmon-tuna-cucumber_921026-13368.jpg" width="60%"/>
+  </div>
+  <br>
+  <div>
+    <h4>Sushi Rolls - $25.00</h4>
+    <p>Tuna, Salmon, Shrimp, Salmon Roe</p>
+    <img src="https://img.freepik.com/premium-photo/californian-sushi-roll-set-with-salmon-tobiko-caviar-various-sushi-sushi-with-salmon-tuna-shrimp_207126-5742.jpg" width="60%"/>
+  </div>
+  <br>
+  <div>
+    <h4>Dynamite Bowl - $17.50</h4>
+    <p>White Rice, Salmon, Crab, Avocado, Edamame, Cucumber, Seaweed</p>
+    <img src="https://img.freepik.com/free-photo/salmon-poke-bowl-flat-lay-photography_53876-108183.jpg" width=60%"/>
+  </div>
+  <br><br>
 <!-- Add your restaurant order form below -->
+  <h2 id="order-form">Order Form</h2>
   <form role='order_form'>
-    <input type='search' placeholder='Put Order Form Here'>
-    <input type='submit' value='order'>
+    <section class="order-details">
+      <h3>You can order now!</h3>
+      <label for="sashimi">Sashimi Platter</label>
+      <input type="number" name="order" id="sashimi" step="1" value="0">
+      <br>
+      <label for="sushi">Sushi Rolls</label>
+      <input type="number" name="order" id="sushi" step="1" value="0">
+      <br>
+      <label for="bowl">Dynamite Bowl</label>
+      <input type="number" name="order" id="bowl" step="1" value="0">
+    </section>
+    <br>
+    <section class="customer-details">
+      <h3>Customer Details</h3>
+      <!-- <input type='search' placeholder='Put Order Form Here'>
+      <br> -->
+      <label for="full-name">Full Name</label>
+      <input type="text" name="full-name" id="full-name" placeholder="First, Last" required>
+      <br>
+      <span>Delivery Address</span>
+      <br>
+      <label for="street"></label>
+      <input type="text" name="street" id="street" placeholder="Street Name, Unit/Apt" required>
+      <br>
+      <label for="city"></label>
+      <input type="text" name="city" id="city" placeholder="City" required>
+      <label for="state"></label>
+      <input type="" name="state" id="state" placeholder="State" required>
+      <label for="zipcode"></label>
+      <input type="text" name="zipcode" id="zipcode" maxlength="5" pattern="[0-9]+" placeholder="Zipcode" required>
+      <br>
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" id="phone" maxlength="10" placeholder="000-000-0000" required>
+      <br>
+      <label for="email">Email Address</label>
+      <input type="type" name="email" id="email" placeholder="john.doe@example.com">
+    </section>
+    <br>
+    <section class="payment-info">
+      <h3>Payment Information</h3>
+      <label for="card-number">Credit Card Number</label>
+      <input type="text" name="card-number" id="card-number" pattern="[0-9]+" maxlength="16" placeholder="0000 0000 0000 0000" required>
+      <br>
+      <label for="exp-date">Expiry Date</label>
+      <input type="text" name="exp-date" id="exp-date" placeholder="MM/YY" required>
+      <label for="cvc">Security Code (CVC)</label>
+      <input type="password" name="cvc" id="cvc" pattern="[0-9]+" maxlength="3" placeholder="000" required>
+    </section>
+    <br>
+    <section class="place-order">
+      <input type='submit' value='Submit Order' id="place-order">
+    </section> 
   </form>
 <!-- Add your restaurant order form above -->
 </main>
-
+<br><br>
 <aside role='complementary'>
   <h2>Sidebar</h2>
   <p>Complementary content, additional information and such...</p>
 </aside>
-
+<br><br>
 <footer role='contentinfo'>
-  <h2>Footer</h2>
-  <p>Information about the document, it's author and such...</p>
+  <h2 id="contact">Contact Us</h2>
+  <p>Thank you for visiting our Sushi Corner! Feel free to contact us at 123-45-SUSHI.</p>
 </footer>
-
+  
 </body>
 </html>
